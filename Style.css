@@ -1,0 +1,153 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    width: 90%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+#session-type {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+#timer {
+    font-size: 48px;
+    margin: 20px 0;
+    color: #444444;
+}
+
+/* Button Styles */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #007BFF);
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Input Field Styles */
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #555555;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* Progress Display */
+#progress {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666666;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .buttons, .settings {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    button, .settings input {
+        flex: 1;
+        margin: 5px;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+body.dark-mode .container {
+    background: #2c2c2c;
+    color: white;
+}
+
+body.dark-mode button {
+    background: linear-gradient(135deg, #1a73e8, #004d99);
+}
+
+body.dark-mode button:hover {
+    background: linear-gradient(135deg, #004d99, #1a73e8);
+}
+
+body.dark-mode input {
+    background: #333333;
+    color: white;
+    border: 1px solid #666666;
+}
+
+button.active {
+    background: linear-gradient(135deg, #0056b3, #007BFF);
+    border: 2px solid #0056b3;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
